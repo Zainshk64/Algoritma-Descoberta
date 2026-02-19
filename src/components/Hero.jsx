@@ -16,7 +16,6 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -26,23 +25,13 @@ const Hero = () => {
           className="w-full h-full object-cover"
           poster="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072"
         >
-          {/* Add your video source here */}
           <source src="https://www.pexels.com/download/video/7687926/" type="video/mp4" />
         </video>
-        {/* Fallback Image if video doesn't load */}
-        {/* <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072')`,
-          }}
-        /> */}
-        {/* Overlay */}
+
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary)]/90 via-[var(--color-primary)]/80 to-[var(--color-primary)]" />
       </div>
 
-      {/* Animated Background Elements */}
       <div className="absolute inset-0 z-1">
-        {/* Gradient Orbs */}
         <motion.div
           animate={{
             scale: [1, 1.2, 1],

@@ -49,13 +49,13 @@ const Contact = () => {
     {
       icon: FiPhone,
       label: 'Phone',
-      value: '+351 911 830 157',
+      value: '+92 453830157',
       href: 'tel:+351911830157',
     },
     {
       icon: FiMapPin,
       label: 'Location',
-      value: 'Portugal',
+      value: 'Pakistan',
       href: null,
     },
   ];
@@ -146,30 +146,14 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="relative rounded-2xl overflow-hidden hidden lg:block"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074"
-                alt="Contact us"
-                className="w-full h-64 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary-light)] via-transparent to-transparent" />
-            </motion.div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name & Email Row */}
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
                   <label

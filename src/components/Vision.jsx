@@ -120,17 +120,7 @@ const Vision = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-secondary)]/20 to-[var(--color-accent-purple)]/20" />
               </div>
 
-              {/* Floating Icon */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="absolute -top-6 -left-6 lg:left-6"
-              >
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[var(--color-secondary)] to-[var(--color-accent-purple)] flex items-center justify-center shadow-2xl">
-                  <FiEye className="w-10 h-10 text-white" />
-                </div>
-              </motion.div>
+              
 
               {/* Stats Card */}
               <motion.div

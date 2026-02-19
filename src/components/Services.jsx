@@ -1,4 +1,3 @@
-// src/components/Services.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -83,14 +82,12 @@ const Services = () => {
       ref={ref}
       className="section-padding bg-[var(--color-primary)] relative overflow-hidden"
     >
-      {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-0 w-72 h-72 bg-[var(--color-secondary)]/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[var(--color-accent-purple)]/10 rounded-full blur-3xl" />
       </div>
 
       <div className="container-custom relative z-10">
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -128,10 +125,8 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              whileHover={{ y: -10 }}
               className="group relative bg-[var(--color-primary-light)] rounded-2xl overflow-hidden"
             >
-              {/* Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={service.image}
@@ -140,13 +135,11 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary-light)] via-transparent to-transparent" />
                 
-                {/* Icon Overlay */}
                 <div className={`absolute top-4 right-4 w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg`}>
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-[var(--color-secondary)] transition-colors">
                   {service.title}
@@ -156,7 +149,6 @@ const Services = () => {
                 </p>
               </div>
 
-              {/* Hover Border Effect */}
               <div className={`absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[var(--color-secondary)]/50 transition-colors pointer-events-none`} />
             </motion.div>
           ))}

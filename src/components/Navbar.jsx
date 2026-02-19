@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
@@ -46,7 +45,6 @@ const Navbar = () => {
       >
         <div className="container-custom">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
             <motion.a
               href="#home"
               onClick={(e) => {
@@ -64,7 +62,6 @@ const Navbar = () => {
               </span>
             </motion.a>
 
-            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <motion.a
@@ -90,7 +87,6 @@ const Navbar = () => {
               </motion.button>
             </div>
 
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden text-white p-2"
@@ -101,7 +97,6 @@ const Navbar = () => {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
