@@ -55,7 +55,7 @@ const Contact = () => {
     {
       icon: FiMapPin,
       label: "Location",
-      value: "Pakistan",
+      value: "Portugal",
       href: null,
     },
   ];

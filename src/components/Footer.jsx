@@ -63,7 +63,7 @@ const Footer = () => {
                   className="flex items-center gap-3 text-[var(--color-text-muted)] hover:text-white transition-colors"
                 >
                   <FiPhone className="w-5 h-5 text-[var(--color-secondary)]" />
-                  <span className="text-sm">+92 3204823939</span>
+                  <span className="text-sm">+351 911 830 157</span>
                 </a>
               </li>
             </ul>
