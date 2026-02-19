@@ -1,8 +1,8 @@
 // src/components/Contact.jsx
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { FiMail, FiPhone, FiSend, FiMapPin } from 'react-icons/fi';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FiMail, FiPhone, FiSend, FiMapPin } from "react-icons/fi";
 
 const Contact = () => {
   const { ref, inView } = useInView({
@@ -11,10 +11,10 @@ const Contact = () => {
   });
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,7 +34,7 @@ const Contact = () => {
 
     setIsSubmitting(false);
     setSubmitted(true);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setFormData({ name: "", email: "", subject: "", message: "" });
 
     setTimeout(() => setSubmitted(false), 5000);
   };
@@ -42,20 +42,20 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: FiMail,
-      label: 'Email',
-      value: 'algoritmadescoberta@gmail.com',
-      href: 'mailto:algoritmadescoberta@gmail.com',
+      label: "Email",
+      value: "algoritmadescoberta@gmail.com",
+      href: "mailto:algoritmadescoberta@gmail.com",
     },
     {
       icon: FiPhone,
-      label: 'Phone',
-      value: '+92 453830157',
-      href: 'tel:+351911830157',
+      label: "Phone",
+      value: "+351 911 830 157",
+      href: "tel:+351911830157",
     },
     {
       icon: FiMapPin,
-      label: 'Location',
-      value: 'Pakistan',
+      label: "Location",
+      value: "Pakistan",
       href: null,
     },
   ];
@@ -99,8 +99,8 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-[var(--color-text-secondary)] text-lg"
           >
-            We would love to hear from you. Feel free to reach out for inquiries,
-            consultations, or project discussions.
+            We would love to hear from you. Feel free to reach out for
+            inquiries, consultations, or project discussions.
           </motion.p>
         </div>
 
@@ -145,7 +145,6 @@ const Contact = () => {
                 </motion.div>
               ))}
             </div>
-
           </motion.div>
 
           <motion.div
@@ -243,10 +242,7 @@ const Contact = () => {
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center gap-2">
-                    <svg
-                      className="animate-spin h-5 w-5"
-                      viewBox="0 0 24 24"
-                    >
+                    <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
                       <circle
                         className="opacity-25"
                         cx="12"
