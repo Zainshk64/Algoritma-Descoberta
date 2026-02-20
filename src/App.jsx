@@ -1,26 +1,24 @@
 // src/App.jsx
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Mission from './components/Mission';
-import Vision from './components/Vision';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[var(--color-primary)]">
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Mission />
-      <Vision />
-      <Contact />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="services" element={<Services />} />
+        <Route path="portfolio" element={<Portfolio />} />
+        <Route path="contact" element={<Contact />} />
+      </Route>
+    </Routes>
   );
 }
 
